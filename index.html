@@ -1,64 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dulcería</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulcería</title>
 
-<style>
-body{
-  margin:0;
-  font-family:Arial;
-  background:pink;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-}
+  <style>
 
-.container{
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
-  width:350px;
-}
+    body{
+      margin:0;
+      font-family:Arial;
+      background:pink;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+    }
 
-button{
-  background:#ff4d6d;
-  color:white;
-  border:none;
-  padding:12px 20px;
-  border-radius:10px;
-  cursor:pointer;
-  font-size:16px;
-}
+    .container{
+      background:white;
+      padding:30px;
+      border-radius:20px;
+      text-align:center;
+      width:350px;
+    }
 
-.ruleta{
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  background:conic-gradient(red, orange, yellow, green, blue, purple, red);
-  margin:20px auto;
-  transition:transform 4s ease-out;
-}
+    button{
+      background:#ff4d6d;
+      color:white;
+      border:none;
+      padding:12px 20px;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:16px;
+    }
 
-#resultado{
-  margin-top:20px;
-  font-size:20px;
-  font-weight:bold;
-}
-</style>
+    .ruleta{
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:conic-gradient(
+        red,
+        orange,
+        yellow,
+        green,
+        blue,
+        purple,
+        red
+      );
+      margin:20px auto;
+      transition:transform 4s ease-out;
+    }
+
+    #resultado{
+      margin-top:20px;
+      font-size:20px;
+      font-weight:bold;
+    }
+
+  </style>
 </head>
+
 <body>
 
-<div class="container">
-  <h1>🍬 Dulcería 🍭</h1>
+  <div class="container">
 
-  <button onclick="girarRuleta()">
-    Comprar dulce y girar
-  </button>
+    <h1>🍬 Dulcería 🍭</h1>
 
-  <div class="ruleta" id="ruleta"></div>
+    <button onclick="girarRuleta()">
+      Comprar dulce y girar
+    </button>
 
+    <div class="ruleta" id="ruleta"></div>
+
+    <div id="resultado">
+      Presiona el botón
+    </div>
+
+  </div>
+
+  <!-- AQUI SE LLAMA EL SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
 </html>
